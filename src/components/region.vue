@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <headers msg="安装-区域项目经营分析"></headers>
+    <headers msg="路桥-区域项目经营分析"></headers>
     <div class="content">
       <div class="left">
         <!--      开累净利润及开累近利润率-->

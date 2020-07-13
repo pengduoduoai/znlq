@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <headers msg="土木-项目团队经营贡献盘点情况"></headers>
+    <headers msg="路桥-项目团队经营贡献盘点情况"></headers>
     <div class="content">
       <div class="left">
         <!--        财务指标-->
@@ -176,7 +176,7 @@ export default {
   mounted() {
     let that = this;
     let xm = this.$route.query.xm;
-    that.$api.getxmdetailaz(xm).then(data => {
+    that.$api.getxmdetaillq(xm).then(data => {
       if (data.code == 200) {
         that.klcz = data.klcz?formatNumberRgx(data.klcz):'';//开累产值
         that.kljlr = data.kljlr?formatNumberRgx(data.kljlr):'';//开累净利润
@@ -251,7 +251,7 @@ export default {
             name: "季度运营指标",
             type: "pictorialBar",
             //位置偏移
-            barCategoryGap: "-10%",
+            // barCategoryGap: "-10%",
             //图形宽度
             barWidth: 60,
             //图形形状

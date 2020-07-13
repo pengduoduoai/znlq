@@ -18,10 +18,6 @@
               <div style="text-align: left;padding-left:20px">开累产值</div>
               <div class="num" v-for="(item,index) in klczarr">{{item?item:'0'}}</div>
             </div>
-<!--            <div class="item" style=" background: rgba(238,238,238,.6)">-->
-<!--              <div style="text-align: left;padding-left:20px">开累净利润</div>-->
-<!--              <div class="num" v-for="(item,index) in kljlrarr">{{item?item:'0'}}</div>-->
-<!--            </div>-->
             <div class="item" style=" background: rgba(238,238,238,.6)">
               <div style="text-align: left;padding-left:20px">开累近利润率（本月）</div>
               <div class="num" v-for="(item,index) in kljlrlarr">{{item?item:'0'}}%</div>
@@ -32,7 +28,6 @@
             </div>
             <div class="item" style=" background: rgba(238,238,238,.6)">
               <div style="text-align: left;padding-left:20px">人工成本</div>
-<!--              <div class="num">{{rgcbarr?rgcbarr:'0'}}%</div>-->
               <div class="num" v-for="(item,index) in rgcbarr">{{item?item:'0'}}</div>
             </div>
           </div>
@@ -505,10 +500,10 @@ export default {
         let arr1 = that.data;
         arr1.map(item => {
           if (item.name == name) {
-            // that.$router.push({
-            //   path: "/contribution",
-            //   query: { name: item.sheng, xm: name }
-            // });
+            that.$router.push({
+              path: "/contribution",
+              query: { xm: name }
+            });
           }
         });
       });

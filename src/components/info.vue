@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <headers msg="安装-关键岗位人才画像"></headers>
+    <headers msg="路桥-关键岗位人才画像"></headers>
     <div class="content">
       <div class="left">
         <!--        基本信息-->

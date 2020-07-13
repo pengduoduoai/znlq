@@ -16,9 +16,9 @@ export const api = {
   // getxmmsgaz: function (qy) {
   //   return http.get('/apiwages/cyrcpd/getxmmsgaz', {qy})
   // },
-  // getxmdetailaz: function (xm) {
-  //   return http.get('/apiwages/cyrcpd/getxmdetailaz', {xm})
-  // },
+  getxmdetaillq: function (xm) {
+    return http.get('/apiwages/cyrcpd/getxmdetaillq', {xm})
+  },
   // getusermsgaz: function (username) {
   //   return http.get('/apiwages/cyrcpd/getusermsgaz', {username})
   // },

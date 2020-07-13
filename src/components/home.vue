@@ -105,7 +105,7 @@
               <div class="list_left">
                 <div class="num">01</div>
                 <div class="title">B类公司</div>
-                <div class="look" @click="jump('B')">查看</div>
+<!--                <div class="look" @click="jump('B')">查看</div>-->
               </div>
               <div class="list_right">
                 <template v-for="(item,index) in A">
@@ -150,7 +150,7 @@
               <div class="list_left">
                 <div class="num">02</div>
                 <div class="title">D类公司</div>
-                <div class="look" @click="jump('D')">查看</div>
+<!--                <div class="look" @click="jump('D')">查看</div>-->
               </div>
               <div class="list_right">
                 <template v-for="(item,index) in B">
@@ -193,7 +193,7 @@
               <div class="list_left">
                 <div class="num">03</div>
                 <div class="title">E类公司</div>
-                <div class="look" @click="jump('E')">查看</div>
+<!--                <div class="look" @click="jump('E')">查看</div>-->
               </div>
               <div class="list_right">
                 <template v-for="(item,index) in C">
@@ -292,14 +292,15 @@
     },
     methods: {
       jump(e) {
-        this.$router.push({ path: "/city", query: { type: e } });
+
+        // this.$router.push({ path: "/city", query: { type: e } });
       },
-      // jump1(e) {
-      //   this.$router.push({
-      //     path: "/region",
-      //     query: {name: e.sheng, qy: '安装'+e.name}
-      //   });
-      // },
+      jump1(e) {
+        this.$router.push({
+          path: "/contribution",
+          query: { xm: e.name }
+        });
+      },
       operation(list, arr) {
         let operation = this.$echarts.init(document.getElementById('operation_content'));
         operation.setOption({
@@ -698,9 +699,12 @@
 
             .title {
               width: 130px;
+              height: 138px;
+              line-height: 138px;
               position: absolute;
-              right: 11px;
-              top: 26px;
+              right: 0;
+              text-align: center;
+              top: 0;
               font-size: 26px;
               color: rgba(51, 51, 51, 1);
               font-family: "PingFang-bold";
