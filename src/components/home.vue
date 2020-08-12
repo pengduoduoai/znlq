@@ -104,7 +104,7 @@
             <div class="list">
               <div class="list_left">
                 <div class="num">01</div>
-                <div class="title">B类项目</div>
+                <div class="title">{{qycat?qycat.B:''}}</div>
 <!--                <div class="look" @click="jump('B')">查看</div>-->
               </div>
               <div class="list_right">
@@ -149,7 +149,7 @@
             <div class="list">
               <div class="list_left">
                 <div class="num">02</div>
-                <div class="title">D类项目</div>
+                <div class="title">{{qycat?qycat.D:''}}</div>
 <!--                <div class="look" @click="jump('D')">查看</div>-->
               </div>
               <div class="list_right">
@@ -192,7 +192,7 @@
             <div class="list">
               <div class="list_left">
                 <div class="num">03</div>
-                <div class="title">E类项目</div>
+                <div class="title">{{qycat?qycat.E:''}}</div>
 <!--                <div class="look" @click="jump('E')">查看</div>-->
               </div>
               <div class="list_right">
@@ -276,6 +276,7 @@
       console.log(name);
       this.$api.getcplq().then(data => {
         if (data.code == 200) {
+          that.qycat = data.qycat
           that.A = data.datashow.B;
           that.B = data.datashow.D;
           that.C = data.datashow.E;

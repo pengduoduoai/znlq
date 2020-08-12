@@ -102,7 +102,7 @@
                 </div>
               </template>
               <div class="item">
-                < <img src="../assets/green.png" alt="" class="img" v-if="item.color==1">
+                 <img src="../assets/green.png" alt="" class="img" v-if="item.color==1">
                 <img src="../assets/red.png" alt="" class="img" v-else-if="item.color==3">
                 <img src="../assets/yellow.png" alt="" class="img" v-else>
                 <div class="left">
