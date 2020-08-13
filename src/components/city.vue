@@ -51,7 +51,7 @@
         <div class="center_list">
           <div class="item">
             <span style=" background:rgba(73,172,76,1);"></span>
-            <div>经营盈利</div>
+            <div>经营良好</div>
           </div>
           <div class="item">
             <span style=" background:rgba(255,149,28,1);"></span>
@@ -59,7 +59,7 @@
           </div>
           <div class="item">
             <span style=" background:rgba(172,35,23,1);"></span>
-            <div>经营亏损</div>
+            <div>经营较差</div>
           </div>
         </div>
       </div>

@@ -91,13 +91,13 @@
             <div class="head_right">
               <div class="item">
                 <div style="background:#42BA24 "></div>
-                <span>经营盈利</span></div>
+                <span>经营良好</span></div>
               <div class="item">
                 <div style="background:#F29426 "></div>
                 <span>经营持平</span></div>
               <div class="item">
                 <div style="background:#AC2317 "></div>
-                <span>经营亏损</span></div>
+                <span>经营较差</span></div>
             </div>
           </div>
           <div class="right_list">
