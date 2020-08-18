@@ -210,6 +210,7 @@
         let operation = this.$echarts.init(
           document.getElementById("operation_content")
         );
+        window.onresize = operation.resize;
         operation.setOption({
           grid: {
             top: "30px",
@@ -314,102 +315,39 @@
 
 <style scoped lang="scss">
   .container {
-    width: 1920px;
-    min-height: 1080px;
-
-    .head {
-      width: 1920px;
-      height: 105px;
-      background: rgba(172, 35, 23, 1);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      .left {
-        font-size: 30px;
-        color: rgba(255, 255, 255, 1);
-        margin: 0 0 0 51px;
-        font-family: "PangMenZhengDao";
-      }
-
-      .center {
-        width: 826px;
-        height: 146px;
-        position: relative;
-
-        img {
-          width: 826px;
-          position: absolute;
-          left: 0;
-          top: 0;
-        }
-
-        div {
-          position: absolute;
-          left: 0;
-          top: 0;
-          text-align: center;
-          width: 826px;
-          line-height: 146px;
-          font-size: 40px;
-          color: rgba(172, 35, 23, 1);
-          font-family: "ZhangHaiShan";
-        }
-      }
-
-      .right {
-        text-align: right;
-        margin: 0 68px 0 0;
-        height: 105px;
-
-        .detail {
-          font-size: 8px;
-          font-weight: 800;
-          color: rgba(255, 255, 255, 0.84);
-          margin: 32px 0 0 0;
-          font-family: "PingFang-bold";
-        }
-
-        .time {
-          font-size: 8px;
-          font-weight: 400;
-          color: rgba(255, 255, 255, 0.6);
-          margin: 4px 0 0 0;
-        }
-      }
-    }
-
+    width: 19.2rem;
+    min-height: 10.8rem;
     .content {
       display: flex;
       justify-content: flex-start;
-      margin: 81px 0 0 0;
+      margin: .81rem 0 0 0;
 
       .left {
-        margin: 0 0 0 66px;
+        margin: 0 0 0 .66rem;
 
         .finance {
-          width: 271px;
-          height: 730px;
+          width: 2.71rem;
+          height: 7.3rem;
           background: rgba(255, 255, 255, 1);
-          box-shadow: 0px 3px 31px 0px rgba(121, 121, 121, 0.1);
-          border-radius: 4px;
+          box-shadow: 0px 3px .31rem 0px rgba(121, 121, 121, 0.1);
+          border-radius: .04rem;
 
           .title {
-            height: 75px;
+            height: .75rem;
             display: flex;
             justify-content: flex-start;
             align-items: center;
-            border-bottom: 1px solid #f1f1f1;
+            border-bottom: .01rem solid #f1f1f1;
 
             span {
-              width: 6px;
-              height: 25px;
+              width: .06rem;
+              height: .25rem;
               background: rgba(172, 35, 23, 1);
-              margin: 0 8px 0 32px;
+              margin: 0 .08rem 0 .32rem;
             }
 
             div {
-              font-size: 26px;
+              font-size: .26rem;
               font-family: PingFang-bold;
               font-weight: 800;
               color: rgba(0, 0, 0, 1);
@@ -417,17 +355,17 @@
           }
 
           .item {
-            margin: 0 0 38px 54px;
+            margin: 0 0 .38rem .54rem;
 
             .money {
-              font-size: 40px;
+              font-size: .4rem;
               font-weight: bold;
               color: rgba(56, 122, 225, 1);
-              text-shadow: 0px 5px 5px rgba(219, 236, 255, 1);
+              text-shadow: 0px .05rem .05rem rgba(219, 236, 255, 1);
             }
 
             .detail {
-              font-size: 16px;
+              font-size: .16rem;
               font-weight: 500;
               color: rgba(51, 51, 51, 0.55);
               display: flex;
@@ -435,7 +373,7 @@
               align-items: center;
 
               img {
-                margin-right: 7px;
+                margin-right: .07rem;
               }
             }
           }
@@ -443,37 +381,37 @@
       }
 
       .center {
-        margin: 0 0 0 22px;
+        margin: 0 0 0 .22rem;
         /*人效指标*/
         .index {
-          width: 754px;
-          height: 259px;
+          width: 7.54rem;
+          height: 2.59rem;
           background: rgba(255, 255, 255, 1);
-          box-shadow: 0px 3px 31px 0px rgba(121, 121, 121, 0.1);
-          border-radius: 4px;
+          box-shadow: 0px 3px .31rem 0px rgba(121, 121, 121, 0.1);
+          border-radius: .04rem;
 
           .title {
-            height: 75px;
-            border-bottom: 1px solid #f1f1f1;
+            height: .75rem;
+            border-bottom: .01rem solid #f1f1f1;
             display: flex;
             justify-content: space-between;
             align-items: center;
 
             .title_left {
-              margin: 0 0 0 32px;
+              margin: 0 0 0 .32rem;
               display: flex;
               justify-content: flex-start;
               align-items: center;
 
               span {
-                width: 6px;
-                height: 25px;
+                width: .06rem;
+                height: .25rem;
                 background: rgba(172, 35, 23, 1);
-                margin: 0 8px 0 0;
+                margin: 0 .08rem 0 0;
               }
 
               div {
-                font-size: 26px;
+                font-size: .26rem;
                 font-family: "PingFang-bold";
                 font-weight: 800;
                 color: rgba(0, 0, 0, 1);
@@ -487,46 +425,44 @@
               margin: 0 43px 0 0;
 
               span {
-                font-size: 16px;
+                font-size: .16rem;
                 font-family: "PingFang-Medium";
                 color: rgba(51, 51, 51, 0.55);
-                margin-right: 7px;
+                margin-right: .07rem;
                 display: flex;
                 justify-content: flex-start;
                 align-items: center;
 
                 img {
-                  margin-right: 4px;
+                  margin-right: .04rem;
                 }
               }
 
               div {
-                font-size: 40px;
-
+                font-size: .4rem;
                 font-weight: bold;
                 color: rgba(255, 149, 28, 1);
-                text-shadow: 0px 5px 5px rgba(255, 235, 213, 1);
+                text-shadow: 0px .05rem .05rem rgba(255, 235, 213, 1);
               }
             }
           }
 
           .list {
-            height: 183px;
+            height: 1.83rem;
             display: flex;
             justify-content: space-around;
             align-items: center;
 
             .item {
               div {
-                font-size: 40px;
-
+                font-size: .4rem;
                 font-weight: bold;
                 color: rgba(255, 149, 28, 1);
-                text-shadow: 0px 5px 5px rgba(255, 235, 213, 1);
+                text-shadow: 0px .05rem .05rem rgba(255, 235, 213, 1);
               }
 
               span {
-                font-size: 16px;
+                font-size: .16rem;
                 font-family: "PingFang-Medium";
                 font-weight: 500;
                 color: rgba(51, 51, 51, 0.55);
@@ -535,7 +471,7 @@
                 align-items: center;
 
                 img {
-                  margin-right: 4px;
+                  margin-right: .04rem;
                 }
               }
             }
@@ -543,29 +479,29 @@
         }
 
         .operation {
-          width: 752px;
-          height: 448px;
+          width: 7.52rem;
+          height: 4.48rem;
           background: rgba(255, 255, 255, 1);
-          box-shadow: 0px 3px 31px 0px rgba(121, 121, 121, 0.15);
-          border-radius: 4px;
-          margin-top: 23px;
+          box-shadow: 0px 3px .31rem 0px rgba(121, 121, 121, 0.15);
+          border-radius: .04rem;
+          margin-top: .23rem;
 
           .title {
-            height: 75px;
+            height: .75rem;
             display: flex;
             justify-content: flex-start;
             align-items: center;
-            border-bottom: 1px solid #f1f1f1;
+            border-bottom: .01rem solid #f1f1f1;
 
             span {
-              width: 6px;
-              height: 25px;
+              width: .06rem;
+              height: .25rem;
               background: rgba(172, 35, 23, 1);
-              margin: 0 8px 0 32px;
+              margin: 0 .08rem 0 .32rem;
             }
 
             div {
-              font-size: 26px;
+              font-size: .26rem;
               font-family: PingFang-bold;
               font-weight: 800;
               color: rgba(0, 0, 0, 1);
@@ -574,22 +510,22 @@
 
           #operation_content {
             width: 100%;
-            height: 373px;
+            height: 3.73rem;
           }
         }
       }
 
       .right {
-        width: 719px;
-        height: 730px;
+        width: 7.19rem;
+        height: 7.3rem;
         background: rgba(255, 255, 255, 1);
-        box-shadow: 0px 3px 31px 0px rgba(121, 121, 121, 0.1);
-        border-radius: 4px;
-        margin: 0 0 0 23px;
+        box-shadow: 0px 3px .31rem 0px rgba(121, 121, 121, 0.1);
+        border-radius: .04rem;
+        margin: 0 0 0 .23rem;
 
         .title {
-          height: 75px;
-          border-bottom: 1px solid #f1f1f1;
+          height: .75rem;
+          border-bottom: .01rem solid #f1f1f1;
           display: flex;
           justify-content: space-between;
           align-items: center;
@@ -598,17 +534,17 @@
             display: flex;
             justify-content: flex-start;
             align-items: center;
-            margin: 0 0 0 39px;
+            margin: 0 0 0 .39rem;
 
             span {
-              width: 6px;
-              height: 29px;
+              width: .06rem;
+              height: .29rem;
               background: rgba(172, 35, 23, 1);
-              margin: 0 8px 0 0;
+              margin: 0 .08rem 0 0;
             }
 
             div {
-              font-size: 26px;
+              font-size: .26rem;
               font-family: "PingFang-bold";
               font-weight: 800;
               color: rgba(0, 0, 0, 1);
@@ -616,118 +552,117 @@
           }
 
           .title_right {
-            font-size: 20px;
+            font-size: .2rem;
             font-family: "PingFang-Medium";
             font-weight: 500;
             color: rgba(172, 35, 23, 1);
-            margin: 0 25px 0 0;
+            margin: 0 .25rem 0 0;
           }
         }
 
         .list {
-          height: 630px;
+          height: 6.30rem;
           overflow-y: auto;
 
           .item {
             display: flex;
             justify-content: flex-start;
             align-items: center;
-            margin: 54px 0 20px 0;
+            margin: .54rem 0 .2rem 0;
 
             .item_left {
-              margin: 0 0 0 50px;
-              width: 240px;
-              height: 127px;
+              margin: 0 0 0 .5rem;
+              width: 2.4rem;
+              height: 1.27rem;
               background: rgba(255, 255, 255, 1);
-              box-shadow: 0px 11px 36px 0px rgba(154, 141, 141, 0.33);
-              border-radius: 9px;
+              box-shadow: 0px 11px .36rem 0px rgba(154, 141, 141, 0.33);
+              border-radius: .09rem;
               position: relative;
               cursor: pointer;
 
               .age {
-                font-size: 12px;
+                font-size: .12rem;
                 font-weight: 400;
                 color: rgba(51, 51, 51, 0.67);
                 position: absolute;
-                top: 18px;
-                left: 15px;
+                top: .18rem;
+                left: .15rem;
                 z-index: 9;
               }
 
               .position {
-                font-size: 13px;
+                font-size: .13rem;
                 font-weight: 400;
                 color: rgba(0, 0, 0, 1);
                 position: absolute;
-                top: 46px;
-                left: 15px;
+                top: .46rem;
+                left: .15rem;
                 z-index: 9;
               }
 
               .color {
-                width: 97px;
+                width: .97rem;
                 position: absolute;
-                top: 78px;
+                top: .78rem;
                 z-index: 9;
-                left: -8px;
+                left: -.08rem;
               }
 
               .img {
-                /*width: 124px;*/
-                height: 118px;
+                height: 1.18rem;
                 position: absolute;
                 right: 0px;
-                top: 9px;
+                top: .09rem;
               }
 
               .name {
-                font-size: 18px;
+                font-size: .18rem;
                 font-family: PingFang-bold;
                 font-weight: bold;
                 color: rgba(255, 255, 255, 1);
                 position: absolute;
-                top: 79px;
-                left: 16px;
+                top: .79rem;
+                left: .16rem;
                 z-index: 9;
               }
             }
 
             .item_right {
-              width: 462px;
-              margin: 0 0 0 42px;
+              width: 4.62rem;
+              margin: 0 0 0 .42rem;
               display: flex;
               justify-content: flex-start;
               align-items: center;
               overflow-x: auto;
 
               .right_item {
-                width: 98px;
-                height: 102px;
+                width: .98rem;
+                height: 1.02rem;
                 background: rgba(233, 16, 16, 0.03);
-                border-radius: 8px;
-                margin-right: 42px;
+                border-radius: .08rem;
+                margin-right: .42rem;
                 text-align: center;
                 cursor: pointer;
 
                 .detail {
-                  font-size: 14px;
+                  font-size: .14rem;
                   color: rgba(51, 51, 51, 0.44);
-                  margin-top: 10px;
+                  margin-top: .1rem;
                 }
 
                 .name {
-                  font-size: 20px;
+                  font-size: .2rem;
                   font-family: PingFang-bold;
                   font-weight: bold;
                   color: rgba(0, 0, 0, 1);
-                  margin-top: 5px;
+                  margin-top: .05rem;
                 }
 
                 .age {
-                  font-size: 12px;
+                  font-size: .12rem;
                   font-weight: 400;
                   color: rgba(51, 51, 51, 0.44);
-                  margin-top: 10px;
+                  margin-top: .1rem;
                 }
               }
             }

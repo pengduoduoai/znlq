@@ -138,7 +138,7 @@
         <swiper class="swiper-container" ref="mySwiper" :options="swiperOptions">
           <swiper-slide class="swiper-slide" v-if="thirdclass&& thirdclass.length>0"
                         v-for="(item1,key) in thirdclass" :key="key"
-                        :style="{width:(item1.user?item1.user.length:'1')*287+'px'}">
+                        :style="{width:(item1.user?item1.user.length:'1')*2.87+'rem'}">
             <div class="list3_item">
               <div class="item">
                 <div class="top_top">
@@ -221,7 +221,7 @@
         <swiper class="swiper-container" ref="mySwiper" :options="swiperOptions">
           <swiper-slide class="swiper-slide" v-if="fourclass&& fourclass.length>0"
                         v-for="(item1,key) in fourclass" :key="key"
-                        :style="{width:(item1.user?item1.user.length:'1')*287+'px'}">
+                        :style="{width:(item1.user?item1.user.length:'1')*2.87+'rem'}">
             <div class="list3_item">
               <div class="item">
                 <div class="top_top">
@@ -469,74 +469,74 @@ export default {
 
   .look {
     position: absolute;
-    top: 250px;
-    right: 430px;
+    top: 2.5rem;
+    right: 4.3rem;
     cursor: pointer;
     color: rgba(222, 40, 37, 1);
-    font-size: 30px;
+    font-size: .3rem;
   }
 }
 
 .center {
-  width: 1920px;
-  padding: 10px 0 50px 0;
+  width: 19.2rem;
+  padding: .1rem 0 .5rem 0;
 
   .swiper-container {
 
   }
 
   .swiper-slide {
-    width: 287px;
-    margin-right: 20px;
+    width: 2.87rem;
+    margin-right: .2rem;
   }
 
   .title {
     display: flex;
     justify-content: center;
-    margin: 30px 0 30px -39px;
+    margin: .3rem 0 .3rem -.39rem;
 
 
     div {
       background: #f1f0f0;
-      padding: 10px;
+      padding: .1rem;
       position: relative;
       text-align: center;
 
       div {
-        font-size: 22px;
+        font-size: .22rem;
         font-weight: bold;
         color: rgba(0, 0, 0, 1);
       }
 
       span {
         display: inline-block;
-        width: 1px;
-        height: 30px;
+        width: .01rem;
+        height: .3rem;
         background: #979797;
         position: absolute;
-        bottom: -30px;
+        bottom: -.3rem;
 
       }
     }
   }
 
   .list1 {
-    width: 1920px;
+    width: 19.2rem;
     display: flex;
     justify-content: space-around;
-    /*margin: 54px 0 0 0;*/
+    /*margin: .54rem 0 0 0;*/
     overflow-y: auto;
 
     .list1_item {
       .top {
-        width: 270px;
+        width: 2.7rem;
         display: flex;
         justify-content: center;
         position: relative;
 
         div {
-          width: 1px;
-          height: 27px;
+          width: .01rem;
+          height: .27rem;
           background: #979797;
         }
 
@@ -548,22 +548,22 @@ export default {
         position: absolute;
         left: 0;
         top: 0;
-        width: 200px;
-        height: 1px;
+        width: 2rem;
+        height: .01rem;
         background: #979797;
       }
 
       .top1 {
 
-        width: 270px;
+        width: 2.7rem;
         display: flex;
         justify-content: center;
-        /*border-top: 1px solid #979797;*/
+        /*border-top: .01rem solid #979797;*/
         position: relative;
 
         div {
-          width: 1px;
-          height: 27px;
+          width: .01rem;
+          height: .27rem;
           background: #979797;
         }
 
@@ -573,24 +573,24 @@ export default {
       .top1::after {
         content: '';
         position: absolute;
-        left: 135px;
+        left: 1.35rem;
         top: 0;
-        width: 200px;
-        height: 1px;
+        width: 2rem;
+        height: .01rem;
         background: #979797;
       }
 
       .top2 {
 
-        width: 270px;
+        width: 2.7rem;
         display: flex;
         justify-content: center;
-        /*border-top: 1px solid #979797;*/
+        /*border-top: .01rem solid #979797;*/
         position: relative;
 
         div {
-          width: 1px;
-          height: 27px;
+          width: .01rem;
+          height: .27rem;
           background: #979797;
         }
       }
@@ -598,10 +598,10 @@ export default {
       .top2::after {
         content: '';
         position: absolute;
-        right: 135px;
+        right: 1.35rem;
         top: 0;
-        width: 200px;
-        height: 1px;
+        width: 2rem;
+        height: .01rem;
         background: #979797;
       }
 
@@ -610,64 +610,64 @@ export default {
       }
 
       .item {
-        width: 270px;
-        height: 152px;
+        width: 2.7rem;
+        height: 1.52rem;
         background: #f1f0f0;
-        border-radius: 4px;
+        border-radius: .04rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
         position: relative;
-        margin-left: 7px;
+        margin-left: .07rem;
 
         .img {
-          width: 110px;
+          width: 1.1rem;
           position: absolute;
-          left: -7px;
-          top: 10px;
+          left: -.07rem;
+          top: .1rem;
         }
 
         .left {
-          height: 152px;
-          margin-left: 21px;
+          height: 1.52rem;
+          margin-left: .21rem;
           position: relative;
 
 
           .name {
             /*width: 79px;*/
-            font-size: 22px;
+            font-size: .22rem;
             font-weight: bold;
             color: white;
-            padding: 13px 0 0 0;
+            padding: .13rem 0 0 0;
           }
 
           .detail {
-            font-size: 14px;
+            font-size:.14rem;
             color: rgba(51, 51, 51, 1);
-            padding: 19px 0 0 0;
+            padding: .19rem 0 0 0;
           }
 
           .position {
-            font-size: 14px;
+            font-size:.14rem;
             font-weight: 400;
             color: rgba(51, 51, 51, 1);
-            line-height: 20px;
+            line-height: .2rem;
             display: flex;
             justify-content: flex-start;
             margin-top: 2px;
 
             span {
-              width: 45px;
+              width: .45rem;
             }
 
             div {
-              width: 60px;
+              width: .6rem;
               color: #000;
             }
           }
 
           .detail1 {
-            font-size: 14px;
+            font-size:.14rem;
             font-weight: 400;
             color: rgba(51, 51, 51, 1);
             padding: 3px 0 0 0;
@@ -675,8 +675,8 @@ export default {
         }
 
         .right {
-          height: 124px;
-          margin-right: 10px;
+          height: 1.24rem;
+          margin-right: .1rem;
         }
       }
     }
@@ -684,23 +684,23 @@ export default {
   }
 
   .list2 {
-    width: 1920px;
+    width: 19.2rem;
     display: flex;
     justify-content: space-around;
-    /*margin: 54px 0 0 0;*/
+    /*margin: .54rem 0 0 0;*/
     overflow-y: auto;
 
     .list2_item {
       .top {
-        width: 270px;
+        width: 2.7rem;
         display: flex;
         justify-content: center;
-        /*border-top: 1px solid #979797;*/
+        /*border-top: .01rem solid #979797;*/
         position: relative;
 
         div {
-          width: 1px;
-          height: 27px;
+          width: .01rem;
+          height: .27rem;
           background: #979797;
         }
 
@@ -712,22 +712,22 @@ export default {
         position: absolute;
         left: 0;
         top: 0;
-        width: 308px;
-        height: 1px;
+        width: 3.08rem;
+        height: .01rem;
         background: #979797;
       }
 
       .top1 {
 
-        width: 270px;
+        width: 2.7rem;
         display: flex;
         justify-content: center;
-        /*border-top: 1px solid #979797;*/
+        /*border-top: .01rem solid #979797;*/
         position: relative;
 
         div {
-          width: 1px;
-          height: 27px;
+          width: .01rem;
+          height: .27rem;
           background: #979797;
         }
 
@@ -737,24 +737,24 @@ export default {
       .top1::after {
         content: '';
         position: absolute;
-        left: 135px;
+        left: 1.35rem;
         top: 0;
-        width: 308px;
-        height: 1px;
+        width: 3.08rem;
+        height: .01rem;
         background: #979797;
       }
 
       .top2 {
 
-        width: 270px;
+        width: 2.7rem;
         display: flex;
         justify-content: center;
-        /*border-top: 1px solid #979797;*/
+        /*border-top: .01rem solid #979797;*/
         position: relative;
 
         div {
-          width: 1px;
-          height: 27px;
+          width: .01rem;
+          height: .27rem;
           background: #979797;
         }
 
@@ -764,70 +764,70 @@ export default {
       .top2::after {
         content: '';
         position: absolute;
-        right: 135px;
+        right: 1.35rem;
         top: 0;
-        width: 308px;
-        height: 1px;
+        width: 3.08rem;
+        height: .01rem;
         background: #979797;
       }
 
       .item {
-        width: 270px;
-        height: 152px;
+        width: 2.7rem;
+        height: 1.52rem;
         background: #f1f0f0;
         border-radius: 4px;
         display: flex;
         justify-content: space-between;
         align-items: center;
         position: relative;
-        margin-left: 7px;
+        margin-left: .07rem;
 
         .img {
-          width: 110px;
+          width: 1.1rem;
           position: absolute;
-          left: -7px;
-          top: 10px;
+          left: -.07rem;
+          top: .1rem;
         }
 
         .left {
-          height: 152px;
-          margin-left: 21px;
+          height: 1.52rem;
+          margin-left: .21rem;
           position: relative;
 
           .name {
-            font-size: 22px;
+            font-size: .22rem;
             font-weight: bold;
             color: white;
-            padding: 13px 0 0 0;
+            padding: .13rem 0 0 0;
           }
 
           .detail {
-            font-size: 14px;
+            font-size:.14rem;
             color: rgba(51, 51, 51, 1);
-            padding: 19px 0 0 0;
+            padding: .19rem 0 0 0;
           }
 
           .position {
-            font-size: 14px;
+            font-size:.14rem;
             font-weight: 400;
             color: rgba(51, 51, 51, 1);
-            line-height: 20px;
+            line-height: .2rem;
             display: flex;
             justify-content: flex-start;
             margin-top: 2px;
 
             span {
-              width: 45px;
+              width: .45rem;
             }
 
             div {
-              width: 60px;
+              width: .6rem;
               color: #000;
             }
           }
 
           .detail1 {
-            font-size: 14px;
+            font-size:.14rem;
             font-weight: 400;
             color: rgba(51, 51, 51, 1);
             padding: 3px 0 0 0;
@@ -835,8 +835,8 @@ export default {
         }
 
         .right {
-          height: 124px;
-          margin-right: 10px;
+          height: 1.24rem;
+          margin-right: .1rem;
         }
       }
     }
@@ -844,30 +844,29 @@ export default {
   }
 
   .list3 {
-    width: 1920px;
+    width: 19.2rem;
     display: flex;
     justify-content: center;
-    margin: 54px 0 0 0;
+    margin: .54rem 0 0 0;
 
     .list3_item {
       .item {
         .top_top {
           display: flex;
           justify-content: center;
-          margin: 30px 0 30px -30px;
+          margin: .3rem 0 .3rem -.3rem;
 
           div {
             background: #f1f0f0;
-            padding: 10px;
-
+            padding: .1rem;
             position: relative;
             text-align: center;
 
             div {
-              font-size: 22px;
+              font-size: .22rem;
               font-weight: bold;
-              height: 30px;
-              line-height: 35px;
+              height: .3rem;
+              line-height: .35rem;
               color: rgba(0, 0, 0, 1);
               overflow: hidden;
               text-overflow: ellipsis;
@@ -878,11 +877,11 @@ export default {
 
             span {
               display: inline-block;
-              width: 1px;
-              height: 30px;
+              width: .01rem;
+              height: .3rem;
               background: #979797;
               position: absolute;
-              bottom: -30px;
+              bottom: -.3rem;
 
             }
           }
@@ -893,15 +892,15 @@ export default {
           justify-content: flex-start;
 
           .top {
-            width: 270px;
+            width: 2.7rem;
             display: flex;
             justify-content: center;
-            /*border-top: 1px solid #979797;*/
+            /*border-top: .01rem solid #979797;*/
             position: relative;
 
             div {
-              width: 1px;
-              height: 27px;
+              width: .01rem;
+              height: .27rem;
               background: #979797;
             }
           }
@@ -911,21 +910,21 @@ export default {
             position: absolute;
             left: 0;
             top: 0;
-            width: 308px;
-            height: 1px;
+            width: 3.08rem;
+            height: .01rem;
             background: #979797;
           }
 
           .top1 {
-            width: 270px;
+            width: 2.7rem;
             display: flex;
             justify-content: center;
-            /*border-top: 1px solid #979797;*/
+            /*border-top: .01rem solid #979797;*/
             position: relative;
 
             div {
-              width: 1px;
-              height: 27px;
+              width: .01rem;
+              height: .27rem;
               background: #979797;
             }
 
@@ -935,24 +934,24 @@ export default {
           .top1::after {
             content: '';
             position: absolute;
-            left: 135px;
+            left: 1.35rem;
             top: 0;
-            width: 200px;
-            height: 1px;
+            width: 2rem;
+            height: .01rem;
             background: #979797;
           }
 
           .top2 {
 
-            width: 270px;
+            width: 2.7rem;
             display: flex;
             justify-content: center;
-            /*border-top: 1px solid #979797;*/
+            /*border-top: .01rem solid #979797;*/
             position: relative;
 
             div {
-              width: 1px;
-              height: 27px;
+              width: .01rem;
+              height: .27rem;
               background: #979797;
             }
           }
@@ -960,80 +959,80 @@ export default {
           .top2::after {
             content: '';
             position: absolute;
-            right: 135px;
+            right: 1.35rem;
             top: 0;
-            width: 200px;
-            height: 1px;
+            width: 2rem;
+            height: .01rem;
             background: #979797;
           }
 
           .top3 {
-            width: 1px;
-            height: 27px;
+            width: .01rem;
+            height: .27rem;
             background: #979797;
-            margin-left: 129px;
+            margin-left: 1.29rem;
 
           }
 
           .bottom_list {
 
-            width: 270px;
-            height: 152px;
+            width: 2.7rem;
+            height: 1.52rem;
             background: #f1f0f0;
-            border-radius: 4px;
+            border-radius: .04rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
             position: relative;
-            margin-left: 27px;
+            margin-left: .27rem;
 
             .img {
-              width: 110px;
+              width: 1.1rem;
               position: absolute;
-              left: -7px;
-              top: 10px;
+              left: -.07rem;
+              top: .1rem;
             }
 
             .left {
-              height: 152px;
-              margin-left: 21px;
+              height: 1.52rem;
+              margin-left: .21rem;
               overflow-y: auto;
               position: relative;
 
               .name {
-                font-size: 22px;
+                font-size: .22rem;
                 font-weight: bold;
                 color: white;
-                padding: 13px 0 0 0;
+                padding: .13rem 0 0 0;
               }
 
               .detail {
-                font-size: 14px;
+                font-size:.14rem;
                 color: rgba(51, 51, 51, 1);
-                padding: 19px 0 0 0;
+                padding: .19rem 0 0 0;
               }
 
               .position {
-                font-size: 14px;
+                font-size:.14rem;
                 font-weight: 400;
                 color: rgba(51, 51, 51, 1);
-                line-height: 20px;
+                line-height: .2rem;
                 display: flex;
                 justify-content: flex-start;
                 margin-top: 2px;
 
                 span {
-                  width: 55px;
+                  width: .55rem;
                 }
 
                 div {
-                  width: 60px;
+                  width: .6rem;
                   color: #000;
                 }
               }
 
               .detail1 {
-                font-size: 14px;
+                font-size:.14rem;
                 font-weight: 400;
                 color: rgba(51, 51, 51, 1);
                 padding: 3px 0 0 0;
@@ -1042,8 +1041,8 @@ export default {
 
             .right {
               /*width: 122px;*/
-              height: 124px;
-              margin-right: 10px;
+              height: 1.24rem;
+              margin-right: .1rem;
             }
           }
         }
@@ -1054,34 +1053,34 @@ export default {
       .bottom_add {
         display: flex;
         justify-content: center;
-        margin: 17px 0 0 0;
+        margin: .17rem 0 0 0;
 
         img {
-          width: 48px;
+          width: .48rem;
         }
       }
     }
   }
 
   .list4 {
-    min-width: 1920px;
+    min-width: 19.2rem;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 54px 0 0 0;
+    margin: .54rem 0 0 0;
 
 
     .list4_item {
       .top {
-        width: 270px;
+        width: 2.7rem;
         display: flex;
         justify-content: center;
-        /*border-top: 1px solid #979797;*/
+        /*border-top: .01rem solid #979797;*/
         position: relative;
 
         div {
-          width: 1px;
-          height: 27px;
+          width: .01rem;
+          height: .27rem;
           background: #979797;
         }
 
@@ -1093,22 +1092,22 @@ export default {
         position: absolute;
         left: 0;
         top: 0;
-        width: 308px;
-        height: 1px;
+        width: 3.08rem;
+        height: .01rem;
         background: #979797;
       }
 
       .top1 {
 
-        width: 270px;
+        width: 2.7rem;
         display: flex;
         justify-content: center;
-        /*border-top: 1px solid #979797;*/
+        /*border-top: .01rem solid #979797;*/
         position: relative;
 
         div {
-          width: 1px;
-          height: 27px;
+          width: .01rem;
+          height: .27rem;
           background: #979797;
         }
 
@@ -1118,24 +1117,23 @@ export default {
       .top1::after {
         content: '';
         position: absolute;
-        left: 135px;
+        left: 1.35rem;
         top: 0;
-        width: 200px;
-        height: 1px;
+        width: 2rem;
+        height: .01rem;
         background: #979797;
       }
 
       .top2 {
-
-        width: 270px;
+        width: 2.7rem;
         display: flex;
         justify-content: center;
-        /*border-top: 1px solid #979797;*/
+        /*border-top: .01rem solid #979797;*/
         position: relative;
 
         div {
-          width: 1px;
-          height: 27px;
+          width: .01rem;
+          height: .27rem;
           background: #979797;
         }
 
@@ -1145,23 +1143,23 @@ export default {
       .top2::after {
         content: '';
         position: absolute;
-        right: 135px;
+        right: 1.35rem;
         top: 0;
-        width: 200px;
-        height: 1px;
+        width: 2rem;
+        height: .01rem;
         background: #979797;
       }
 
       .top3 {
-        width: 270px;
+        width: 2.7rem;
         display: flex;
         justify-content: center;
-        /*border-top: 1px solid #979797;*/
+        /*border-top: .01rem solid #979797;*/
         position: relative;
 
         div {
-          width: 1px;
-          height: 27px;
+          width: .01rem;
+          height: .27rem;
           background: #979797;
         }
 
@@ -1173,69 +1171,69 @@ export default {
         position: absolute;
         right: 0;
         top: 0;
-        width: 270px;
-        height: 1px;
+        width: 2.7rem;
+        height: .01rem;
         background: #979797;
       }
 
       .item {
-        width: 270px;
-        height: 152px;
+        width: 2.7rem;
+        height: 1.52rem;
         background: #f1f0f0;
         border-radius: 4px;
         display: flex;
         justify-content: space-between;
         align-items: center;
         position: relative;
-        margin-left: 7px;
+        margin-left: .07rem;
 
         .img {
-          width: 110px;
+          width: 1.1rem;
           position: absolute;
-          left: -7px;
-          top: 10px;
+          left: -.07rem;
+          top: .1rem;
         }
 
         .left {
-          height: 152px;
-          margin-left: 21px;
+          height: 1.52rem;
+          margin-left: .21rem;
           overflow-y: auto;
           position: relative;
 
           .name {
-            font-size: 22px;
+            font-size: .22rem;
             font-weight: bold;
             color: white;
-            padding: 13px 0 0 0;
+            padding: .13rem 0 0 0;
           }
 
           .detail {
-            font-size: 14px;
+            font-size:.14rem;
             color: rgba(51, 51, 51, 1);
-            padding: 19px 0 0 0;
+            padding: .19rem 0 0 0;
           }
 
           .position {
-            font-size: 14px;
+            font-size:.14rem;
             font-weight: 400;
             color: rgba(51, 51, 51, 1);
-            line-height: 20px;
+            line-height: .20rem;
             display: flex;
             justify-content: flex-start;
             margin-top: 2px;
 
             span {
-              width: 55px;
+              width: .55rem;
             }
 
             div {
-              width: 60px;
+              width: .6rem;
               color: #000;
             }
           }
 
           .detail1 {
-            font-size: 14px;
+            font-size:.14rem;
             font-weight: 400;
             color: rgba(51, 51, 51, 1);
             padding: 3px 0 0 0;
@@ -1244,8 +1242,8 @@ export default {
 
         .right {
           /*width: 122px;*/
-          height: 124px;
-          margin-right: 10px;
+          height: 1.24rem;
+          margin-right: .1rem;
         }
       }
     }

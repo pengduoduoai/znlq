@@ -22,13 +22,13 @@
                 <div class="item">
                   <div>岗位：</div>
                   <el-tooltip class="item" effect="light" :content="gangwei" placement="top" >
-                    <el-button style="width:100px">{{gangwei}}</el-button>
+                    <el-button style="width:1rem">{{gangwei}}</el-button>
                   </el-tooltip>
                 </div>
                 <div class="item">
-                  <div style="width: 70px">毕业学校：</div>
+                  <div >毕业学校：</div>
                   <el-tooltip class="item" effect="light" :content="biyexuexiao" placement="top">
-                    <el-button  style="width: 85px">{{biyexuexiao}}</el-button>
+                    <el-button  style="width: .85rem">{{biyexuexiao}}</el-button>
                   </el-tooltip>
                 </div>
                 <div class="item">
@@ -263,604 +263,553 @@
 </script>
 
 <style lang="scss" scoped>
-  .container {
-    width: 1920px;
-    min-height: 1080px;
-    padding-bottom: 30px;
+.container {
+  width: 19.2rem;
+  min-height: 10.8rem;
+  padding-bottom: .3rem;
 
-    .head {
-      width: 1920px;
-      height: 105px;
-      background: rgba(172, 35, 23, 1);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+  .content {
+    margin: .84rem 0 0 0;
+    display: flex;
+    justify-content: flex-start;
 
-      .left {
-        font-size: 30px;
-        color: rgba(255, 255, 255, 1);
-        margin: 0 0 0 51px;
-        font-family: "PangMenZhengDao";
-      }
+    .left {
+      margin: 0 0 0 .66rem;
+      /*基本信息*/
+      .info {
+        width: 4.92rem;
+        height: 2.89rem;
+        background: rgba(255, 255, 255, 1);
+        box-shadow: 0px 3px 31px 0px rgba(121, 121, 121, 0.1);
+        border-radius: 4px;
 
-      .center {
-        width: 826px;
-        height: 146px;
-        position: relative;
-
-        img {
-          width: 826px;
-          position: absolute;
-          left: 0;
-          top: 0;
-        }
-
-        div {
-          position: absolute;
-          left: 0;
-          top: 0;
-          text-align: center;
-          width: 826px;
-          line-height: 146px;
-          font-size: 40px;
-          color: rgba(172, 35, 23, 1);
-          font-family: "ZhangHaiShan";
-        }
-      }
-
-      .right {
-        text-align: right;
-        margin: 0 68px 0 0;
-        height: 105px;
-
-        .detail {
-          font-size: 8px;
-          font-weight: 800;
-          color: rgba(255, 255, 255, 0.84);
-          margin: 32px 0 0 0;
+        .title {
+          height: .77rem;
+          border-bottom: 1px solid #f1f1f1;
+          display: flex;
+          align-items: center;
           font-family: "PingFang-bold";
+
+          span {
+            width: .06rem;
+            height: .25rem;
+            background: rgba(172, 35, 23, 1);
+            margin: 0 .08rem 0 .32rem;
+          }
+
+          div {
+            font-size: .26rem;
+            font-weight: 800;
+            color: rgba(0, 0, 0, 1);
+          }
         }
 
-        .time {
-          font-size: 8px;
-          font-weight: 400;
-          color: rgba(255, 255, 255, 0.6);
-          margin: 4px 0 0 0;
+        .info_center {
+          display: flex;
+          justify-content: flex-start;
+          margin: .37rem 0 0 0;
+
+          .info_left {
+            width: 1.13rem;
+            margin: 0 0 0 .31rem;
+          }
+
+          .info_right {
+            margin: 0 0 0 .32rem;
+
+            .name {
+              font-size: .22rem;
+              font-weight: bold;
+              color: rgba(0, 0, 0, 1);
+              margin: 0 0 .1rem 0;
+              font-family: "PingFang-bold";
+            }
+
+            .info_list {
+              width: 3.15rem;
+              display: flex;
+              justify-content: flex-start;
+              flex-wrap: wrap;
+              align-items: flex-start;
+
+              .item {
+                width: 1.57rem;
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+                font-size: .14rem;
+                margin: .1rem 0 0 0;
+
+                div {
+                  color: rgba(51, 51, 51, 0.77);
+                }
+
+                button {
+                  padding: 0 !important;
+                  border: 0 !important;
+                  margin: 0;
+                  height: .2rem;
+                  line-height: .2rem;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+                }
+
+                span {
+                  color: #000000;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .el-button {
+        color: #000000 !important;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      /*绩效表现*/
+      .performance {
+        width: 4.92rem;
+        height: 3.03rem;
+        background: rgba(255, 255, 255, 1);
+        box-shadow: 0px 3px .31rem 0px rgba(121, 121, 121, 0.1);
+        border-radius: 4px;
+        margin: .25rem 0 0 0;
+
+        .title {
+          height: .77rem;
+          border-bottom: 1px solid #f1f1f1;
+          display: flex;
+          align-items: center;
+          font-family: "PingFang-bold";
+
+          span {
+            width: .06rem;
+            height: .25rem;
+            background: rgba(172, 35, 23, 1);
+            margin: 0 .08rem 0 .32rem;
+          }
+
+          div {
+            font-size: .26rem;
+            font-weight: 800;
+            color: rgba(0, 0, 0, 1);
+          }
+        }
+
+        .performance_list {
+          margin: .09rem 0 0 .31rem;
+
+          .item {
+            width: 4.31rem;
+            height: .4rem;
+            background: rgba(228, 236, 251, 0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: .24rem 0 0 0;
+
+            div {
+              font-size: .16rem;
+              font-weight: 400;
+              color: rgba(51, 51, 51, 1);
+              margin: 0 0 0 .31rem;
+            }
+
+            span {
+              font-size: .2rem;
+              font-weight: bold;
+              color: rgba(16, 107, 233, 1);
+              margin: 0 .13rem 0 0;
+              font-family: "PingFang-bold";
+            }
+          }
+        }
+      }
+
+      /*岗位胜任匹配度*/
+      .competent {
+        width: 4.92rem;
+        height: 3.14rem;
+        background: rgba(255, 255, 255, 1);
+        box-shadow: 0px 3px .31rem 0px rgba(121, 121, 121, 0.1);
+        border-radius: 4px;
+        margin: .25rem 0 0 0;
+
+        .title {
+          height: .77rem;
+          border-bottom: 1px solid #f1f1f1;
+          display: flex;
+          align-items: center;
+          font-family: "PingFang-bold";
+
+          span {
+            width: 6px;
+            height: .25rem;
+            background: rgba(172, 35, 23, 1);
+            margin: 0 8px 0 .32rem;
+          }
+
+          div {
+            font-size: .26rem;
+            font-weight: 800;
+            color: rgba(0, 0, 0, 1);
+          }
+        }
+
+        .competent_list {
+          .item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: .27rem;
+
+            span {
+              font-size: .18rem;
+              color: rgba(109, 109, 109, 1);
+              margin: 0 0 0 .31rem;
+            }
+
+            img {
+              width: 1.32rem;
+              margin: 0 .17rem 0 0;
+            }
+          }
         }
       }
     }
 
-    .content {
-      margin: 84px 0 0 0;
-      display: flex;
-      justify-content: flex-start;
+    .center {
+      margin: 0 0 0 .5rem;
+      /*任职经历*/
+      .experience {
+        width: 5.91rem;
+        background: rgba(255, 255, 255, 1);
+        box-shadow: 0px 3px .31rem 0px rgba(121, 121, 121, 0.1);
+        border-radius: 4px;
 
-      .left {
-        margin: 0 0 0 66px;
-        /*基本信息*/
-        .info {
-          width: 492px;
-          height: 289px;
-          background: rgba(255, 255, 255, 1);
-          box-shadow: 0px 3px 31px 0px rgba(121, 121, 121, 0.1);
-          border-radius: 4px;
+        .title {
+          height: .76rem;
+          border-bottom: 1px solid #f1f1f1;
+          display: flex;
+          align-items: center;
+          font-family: "PingFang-bold";
 
-          .title {
-            height: 77px;
-            border-bottom: 1px solid #f1f1f1;
-            display: flex;
-            align-items: center;
-            font-family: "PingFang-bold";
-
-            span {
-              width: 6px;
-              height: 25px;
-              background: rgba(172, 35, 23, 1);
-              margin: 0 8px 0 32px;
-            }
-
-            div {
-              font-size: 26px;
-              font-weight: 800;
-              color: rgba(0, 0, 0, 1);
-            }
+          span {
+            width: .06rem;
+            height: .25rem;
+            background: rgba(172, 35, 23, 1);
+            margin: 0 .08rem 0 .32rem;
           }
 
-          .info_center {
-            display: flex;
-            justify-content: flex-start;
-            margin: 37px 0 0 0;
-
-            .info_left {
-              width: 113px;
-              margin: 0 0 0 31px;
-            }
-
-            .info_right {
-              margin: 0 0 0 32px;
-
-              .name {
-                font-size: 22px;
-                font-weight: bold;
-                color: rgba(0, 0, 0, 1);
-                margin: 0 0 10px 0;
-                font-family: "PingFang-bold";
-              }
-
-              .info_list {
-                width: 315px;
-                display: flex;
-                justify-content: flex-start;
-                flex-wrap: wrap;
-                align-items: flex-start;
-
-                .item {
-                  width: 157px;
-                  display: flex;
-                  justify-content: flex-start;
-                  align-items: flex-start;
-                  font-size: 14px;
-                  margin: 10px 0 0 0;
-
-                  div {
-                    color: rgba(51, 51, 51, 0.77);
-                  }
-                  button{
-                    padding: 0!important;
-                    border: 0!important;
-                    margin: 0;
-                    height: 20px;
-                    line-height: 20px;
-                    overflow:hidden;
-                    text-overflow:ellipsis;
-                    white-space:nowrap;
-                  }
-                  span {
-                    color: #000000;
-                  }
-                }
-              }
-            }
+          div {
+            font-size: .26rem;
+            font-weight: 800;
+            color: rgba(0, 0, 0, 1);
           }
         }
-        .el-button {
-          color: #000000!important;
-          overflow:hidden;
-          text-overflow:ellipsis;
-          white-space:nowrap;
-        }
-        /*绩效表现*/
-        .performance {
-          width: 492px;
-          height: 303px;
-          background: rgba(255, 255, 255, 1);
-          box-shadow: 0px 3px 31px 0px rgba(121, 121, 121, 0.1);
-          border-radius: 4px;
-          margin: 25px 0 0 0;
 
-          .title {
-            height: 77px;
-            border-bottom: 1px solid #f1f1f1;
-            display: flex;
-            align-items: center;
-            font-family: "PingFang-bold";
+        .experience_list {
+          margin: .1rem 0 0 0;
+          height: 3.80rem;
+          overflow-y: auto;
 
-            span {
-              width: 6px;
-              height: 25px;
-              background: rgba(172, 35, 23, 1);
-              margin: 0 8px 0 32px;
-            }
+          .item {
+            width: 5.46rem;
+            padding: .1rem 0;
+            background: rgba(163, 172, 160, 0.06);
+            margin: 0 0 .15rem .22rem;
+            display: inline-block;
+            position: relative;
 
-            div {
-              font-size: 26px;
-              font-weight: 800;
-              color: rgba(0, 0, 0, 1);
-            }
-          }
-
-          .performance_list {
-            margin: 9px 0 0 31px;
-
-            .item {
-              width: 431px;
-              height: 40px;
-              background: rgba(228, 236, 251, 0.2);
+            .item_top {
               display: flex;
               justify-content: space-between;
-              align-items: center;
-              margin: 24px 0 0 0;
+              align-items: flex-start;
+              margin: .12rem 0 0 0;
 
-              div {
-                font-size: 16px;
-                font-weight: 400;
-                color: rgba(51, 51, 51, 1);
-                margin: 0 0 0 31px;
-              }
-
-              span {
-                font-size: 20px;
-                font-weight: bold;
-                color: rgba(16, 107, 233, 1);
-                margin: 0 13px 0 0;
-                font-family: "PingFang-bold";
-              }
-            }
-          }
-        }
-
-        /*岗位胜任匹配度*/
-        .competent {
-          width: 492px;
-          height: 314px;
-          background: rgba(255, 255, 255, 1);
-          box-shadow: 0px 3px 31px 0px rgba(121, 121, 121, 0.1);
-          border-radius: 4px;
-          margin: 25px 0 0 0;
-
-          .title {
-            height: 77px;
-            border-bottom: 1px solid #f1f1f1;
-            display: flex;
-            align-items: center;
-            font-family: "PingFang-bold";
-
-            span {
-              width: 6px;
-              height: 25px;
-              background: rgba(172, 35, 23, 1);
-              margin: 0 8px 0 32px;
-            }
-
-            div {
-              font-size: 26px;
-              font-weight: 800;
-              color: rgba(0, 0, 0, 1);
-            }
-          }
-
-          .competent_list {
-            .item {
-              display: flex;
-              justify-content: space-between;
-              align-items: center;
-              margin-top: 27px;
-
-              span {
-                font-size: 18px;
-                color: rgba(109, 109, 109, 1);
-                margin: 0 0 0 31px;
-              }
-
-              img {
-                width: 132px;
-                margin: 0 17px 0 0;
-              }
-            }
-          }
-        }
-      }
-
-      .center {
-        margin: 0 0 0 50px;
-        /*任职经历*/
-        .experience {
-          width: 591px;
-          background: rgba(255, 255, 255, 1);
-          box-shadow: 0px 3px 31px 0px rgba(121, 121, 121, 0.1);
-          border-radius: 4px;
-
-          .title {
-            height: 76px;
-            border-bottom: 1px solid #f1f1f1;
-            display: flex;
-            align-items: center;
-            font-family: "PingFang-bold";
-
-            span {
-              width: 6px;
-              height: 25px;
-              background: rgba(172, 35, 23, 1);
-              margin: 0 8px 0 32px;
-            }
-
-            div {
-              font-size: 26px;
-              font-weight: 800;
-              color: rgba(0, 0, 0, 1);
-            }
-          }
-
-          .experience_list {
-            margin: 10px 0 0 0;
-            height: 380px;
-            overflow-y: auto;
-
-            .item {
-              width: 546px;
-              padding: 10px 0;
-              background: rgba(163, 172, 160, 0.06);
-              margin: 0 0 15px 22px;
-              display: inline-block;
-              position: relative;
-
-              .item_top {
-                display: flex;
-                justify-content: space-between;
-                align-items: flex-start;
-                margin: 12px 0 0 0;
-
-                .company {
-                  width:300px ;
-                  font-size: 15px;
-                  color: rgba(72, 72, 72, 1);
-                  margin: 0 0 0 20px;
-                  font-family: "PingFang-Medium";
-                }
-              }
-
-              .time {
-                font-size: 14px;
-                font-weight: 400;
-                margin: 4px 0 0 20px;
-              }
-              .position {
-                width: 180px;
-                font-size: 15px;
-                font-weight: 500;
-                color: rgba(0, 0, 0, 1);
+              .company {
+                width: 3rem;
+                font-size: .15rem;
+                color: rgba(72, 72, 72, 1);
+                margin: 0 0 0 .2rem;
                 font-family: "PingFang-Medium";
-                position: absolute;
-                right: 30px;
-                top: 22px;
               }
             }
-          }
-          .more{
-            width: 591px;
-            height: 68px;
-            background: white;
-            border-top: 1px solid #f1f1f1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 21px;
-            font-weight: 400;
-            color: #000000;
-            div{
-              margin-right: 10px;
+
+            .time {
+              font-size: .14rem;
+              font-weight: 400;
+              margin: 4px 0 0 .2rem;
+            }
+
+            .position {
+              width: 1.8rem;
+              font-size: .15rem;
+              font-weight: 500;
+              color: rgba(0, 0, 0, 1);
+              font-family: "PingFang-Medium";
+              position: absolute;
+              right: .3rem;
+              top: .22rem;
             }
           }
         }
 
+        .more {
+          width: 5.91rem;
+          height: .68rem;
+          background: white;
+          border-top: 1px solid #f1f1f1;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: .21rem;
+          font-weight: 400;
+          color: #000000;
 
-        /*关键业绩指标及达成情况*/
-        .reach {
-          width: 591px;
-          height: 397px;
-          background: rgba(255, 255, 255, 1);
-          box-shadow: 0px 3px 31px 0px rgba(121, 121, 121, 0.1);
-          border-radius: 4px;
-          margin: 23px 0 0 0;
-
-          .title {
-            height: 75px;
-            border-bottom: 1px solid #f1f1f1;
-            display: flex;
-            align-items: center;
-            font-family: "PingFang-bold";
-
-            span {
-              width: 6px;
-              height: 25px;
-              background: rgba(172, 35, 23, 1);
-              margin: 0 8px 0 32px;
-            }
-
-            div {
-              font-size: 26px;
-              font-weight: 800;
-              color: rgba(0, 0, 0, 1);
-            }
-          }
-
-          .detail {
-            width: 564px;
-            height: 200px;
-            font-size: 14px;
-            font-weight: 400;
-
-            overflow-y: auto;
-            display: flex;
-            justify-content: flex-start;
-
-            .left {
-              width: 282px;
-              margin: 0;
-
-              .left_title {
-                color: black;
-              }
-
-              div {
-                margin: 10px 0 0 10px;
-              }
-            }
-
-            .right {
-              width: 262px;
-              margin: 0 0 0 20px;
-
-              .right_title {
-                color: black;
-              }
-
-              div {
-                margin: 10px 0 0 10px;
-              }
-            }
+          div {
+            margin-right: .1rem;
           }
         }
       }
 
-      .right {
-        margin: 0 0 0 50px;
-        /*主管综合评价*/
-        .overview {
-          width: 606px;
-          height: 367px;
-          background: rgba(255, 255, 255, 1);
-          box-shadow: 0px 3px 31px 0px rgba(121, 121, 121, 0.1);
-          border-radius: 4px;
 
-          .title {
-            height: 75px;
-            border-bottom: 1px solid #f1f1f1;
-            display: flex;
-            align-items: center;
-            font-family: "PingFang-bold";
+      /*关键业绩指标及达成情况*/
+      .reach {
+        width: 5.91rem;
+        height: 3.97rem;
+        background: rgba(255, 255, 255, 1);
+        box-shadow: 0px 3px .31rem 0px rgba(121, 121, 121, 0.1);
+        border-radius: .04rem;
+        margin: .23rem 0 0 0;
 
-            span {
-              width: 6px;
-              height: 25px;
-              background: rgba(172, 35, 23, 1);
-              margin: 0 8px 0 32px;
-            }
+        .title {
+          height: .75rem;
+          border-bottom: 1px solid #f1f1f1;
+          display: flex;
+          align-items: center;
+          font-family: "PingFang-bold";
 
-            div {
-              font-size: 26px;
-              font-weight: 800;
-              color: rgba(0, 0, 0, 1);
-            }
+          span {
+            width: 6px;
+            height: 25px;
+            background: rgba(172, 35, 23, 1);
+            margin: 0 8px 0 32px;
           }
 
-          .advantage {
-            width: 576px;
-            height: 69px;
-            margin: 0 0 22px 29px;
-            border-bottom: 1px solid #f1f1f1;
-            position: relative;
-
-            .border {
-              position: absolute;
-              left: 0;
-              bottom: 0;
-              width: 80px;
-              height: 2px;
-              background: #ac2317;
-            }
-
-            .advantage_title {
-              font-size: 20px;
-              font-weight: 500;
-              color: rgba(51, 51, 51, 1);
-              padding-top: 31px;
-              font-family: "PingFang-Medium";
-            }
-          }
-
-          .advantage_detail {
-            width: 564px;
-            font-weight: 400;
-            font-size: 14px;
-
-            height: 120px;
-            overflow-y: auto;
-
-            div {
-              margin: 0px 0 0 29px;
-            }
+          div {
+            font-size: .26rem;
+            font-weight: 800;
+            color: rgba(0, 0, 0, 1);
           }
         }
 
-        /*有待提升*/
-        .promote {
-          width: 606px;
-          height: 272px;
-          background: rgba(255, 255, 255, 1);
-          box-shadow: 0px 3px 31px 0px rgba(121, 121, 121, 0.1);
-          border-radius: 4px;
-          margin-top: 25px;
+        .detail {
+          width: 5.64rem;
+          height: 3rem;
+          font-size: .14rem;
+          font-weight: 400;
 
-          .title {
-            width: 576px;
-            height: 69px;
-            border-bottom: 1px solid #f1f1f1;
-            margin: 0 0 0 31px;
-            position: relative;
-            font-family: "PingFang-Medium";
+          overflow-y: auto;
+          display: flex;
+          justify-content: flex-start;
 
-            span {
-              font-size: 20px;
-              font-weight: 500;
-              color: rgba(51, 51, 51, 1);
-              margin: 31px 0 0 0;
-              display: inline-block;
+          .left {
+            width: 5.64rem;
+            margin: 0;
+
+            .left_title {
+              color: black;
             }
 
             div {
-              position: absolute;
-              left: 0;
-              bottom: 0;
-              width: 80px;
-              height: 2px;
-              background: #ac2317;
+              margin: .1rem 0 0 .1rem;
             }
           }
 
-          .detail {
-            margin: 22px 0 0 29px;
-            width: 564px;
-            font-size: 14px;
-            font-weight: 400;
+          .right {
+            width: 2.62rem;
+            margin: 0 0 0 .2rem;
 
+            .right_title {
+              color: black;
+            }
+
+            div {
+              margin: .1rem 0 0 .1rem;
+            }
+          }
+        }
+      }
+    }
+
+    .right {
+      margin: 0 0 0 .5rem;
+      /*主管综合评价*/
+      .overview {
+        width: 6.06rem;
+        height: 3.67rem;
+        background: rgba(255, 255, 255, 1);
+        box-shadow: 0px 3px .31rem 0px rgba(121, 121, 121, 0.1);
+        border-radius: 4px;
+
+        .title {
+          height: .75rem;
+          border-bottom: 1px solid #f1f1f1;
+          display: flex;
+          align-items: center;
+          font-family: "PingFang-bold";
+
+          span {
+            width: .06rem;
+            height: .25rem;
+            background: rgba(172, 35, 23, 1);
+            margin: 0 8px 0 32px;
+          }
+
+          div {
+            font-size: .26rem;
+            font-weight: 800;
+            color: rgba(0, 0, 0, 1);
           }
         }
 
-        /*发展措施建议*/
-        .suggest {
-          width: 606px;
-          height: 272px;
-          background: rgba(255, 255, 255, 1);
-          box-shadow: 0px 3px 31px 0px rgba(121, 121, 121, 0.1);
-          border-radius: 4px;
-          margin-top: 25px;
+        .advantage {
+          width: 5.76rem;
+          height: .69rem;
+          margin: 0 0 .22rem .29rem;
+          border-bottom: 1px solid #f1f1f1;
+          position: relative;
 
-          .title {
-            width: 576px;
-            height: 69px;
-            border-bottom: 1px solid #f1f1f1;
-            margin: 0 0 0 31px;
-            position: relative;
+          .border {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: .8rem;
+            height: .02rem;
+            background: #ac2317;
+          }
+
+          .advantage_title {
+            font-size: .2rem;
+            font-weight: 500;
+            color: rgba(51, 51, 51, 1);
+            padding-top: .31rem;
             font-family: "PingFang-Medium";
+          }
+        }
 
-            span {
-              font-size: 20px;
-              font-weight: 500;
-              color: rgba(51, 51, 51, 1);
-              margin: 31px 0 0 0;
-              display: inline-block;
-            }
+        .advantage_detail {
+          width: 5.64rem;
+          font-weight: 400;
+          font-size: .14rem;
 
-            div {
-              position: absolute;
-              left: 0;
-              bottom: 0;
-              width: 80px;
-              height: 2px;
-              background: #ac2317;
-            }
+          height: 1.2rem;
+          overflow-y: auto;
+
+          div {
+            margin: 0px 0 0 .29rem;
+          }
+        }
+      }
+
+      /*有待提升*/
+      .promote {
+        width: 6.06rem;
+        height: 2.72rem;
+        background: rgba(255, 255, 255, 1);
+        box-shadow: 0px 3px .31rem 0px rgba(121, 121, 121, 0.1);
+        border-radius: 4px;
+        margin-top: .25rem;
+
+        .title {
+          width: 5.76rem;
+          height: .69rem;
+          border-bottom: 1px solid #f1f1f1;
+          margin: 0 0 0 .31rem;
+          position: relative;
+          font-family: "PingFang-Medium";
+          display: flex;
+          align-items: center;
+
+          span {
+            font-size: .20rem;
+            font-weight: 500;
+            color: rgba(51, 51, 51, 1);
+            margin: .31rem 0 0 0;
+            display: inline-block;
           }
 
-          .detail {
-            margin: 22px 0 0 29px;
-            width: 564px;
-            font-size: 14px;
-            font-weight: 400;
-
+          div {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: .8rem;
+            height: .02rem;
+            background: #ac2317;
           }
+        }
+
+        .detail {
+          margin: .22rem 0 0 .29rem;
+          width: 5.64rem;
+          font-size: .14rem;
+          font-weight: 400;
+
+        }
+      }
+
+      /*发展措施建议*/
+      .suggest {
+        width: 6.06rem;
+        height: 2.72rem;
+        background: rgba(255, 255, 255, 1);
+        box-shadow: 0px 3px .31rem 0px rgba(121, 121, 121, 0.1);
+        border-radius: 4px;
+        margin-top: .25rem;
+
+        .title {
+          width: 5.76rem;
+          height: .69rem;
+          display: flex;
+          align-items: center;
+          border-bottom: 1px solid #f1f1f1;
+          margin: 0 0 0 .31rem;
+          position: relative;
+          font-family: "PingFang-Medium";
+
+          span {
+            font-size: .2rem;
+            font-weight: 500;
+            color: rgba(51, 51, 51, 1);
+            margin: .31rem 0 0 0;
+            display: inline-block;
+          }
+
+          div {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: .8rem;
+            height: .02rem;
+            background: #ac2317;
+          }
+        }
+
+        .detail {
+          margin: .22rem 0 0 .29rem;
+          width: 5.64rem;
+          font-size: .14rem;
+          font-weight: 400;
+
         }
       }
     }
   }
+}
 </style>
