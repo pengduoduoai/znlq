@@ -105,45 +105,50 @@
               <div class="list_left">
                 <div class="num">01</div>
                 <div class="title">{{qycat?qycat.B:''}}</div>
-<!--                <div class="look" @click="jump('B')">查看</div>-->
               </div>
               <div class="list_right">
-                <template v-for="(item,index) in A">
-                  <template v-if="item.color==1">
-                    <div class="item"
-                         style="background:rgba(172,35,23,1);box-shadow:0px .05rem 7px 0px rgba(172,35,23,0.22);"
-                         @click="jump1(item)">
-                      <div>{{item.name}}</div>
-                      <img src="../assets/region.png" alt style="width: .5rem;margin-top: .12rem"/>
-                    </div>
-                  </template>
-                  <template v-else-if="item.color==2">
-                    <div class="item"
-                         style="background:rgba(66,186,36,1);box-shadow:0px .06rem .12rem 0px rgba(66,186,36,0.25);"
-                         @click="jump1(item)">
-                      <div>{{item.name}}</div>
-                      <img src="../assets/region.png" alt style="width: .5rem;margin-top: .12rem"/>
-                    </div>
-                  </template>
-                  <template v-else-if="item.color==3">
-                    <div class="item"
-                         style="background:rgba(242,148,38,1);box-shadow:0px .06rem .08rem 0px rgba(242,148,38,0.21);"
-                         @click="jump1(item)">
-                      <div>{{item.name}}</div>
-                      <img src="../assets/region.png" alt style="width: .5rem;margin-top: .12rem"/>
-                    </div>
-                  </template>
-                  <template v-else>
-                    <div class="item"
-                         style="background:rgba(121,121,121,.5);box-shadow:0px 3px .31rem 0px rgba(121,121,121,0.1);"
-                         @click="jump1(item)">
-                      <div>{{item.name}}</div>
-                      <img src="../assets/region.png" alt style="width: .5rem;margin-top: .12rem"/>
-                    </div>
-                  </template>
+                <div class="list_right_top" :style="{height:datashowB?'auto':'1.2rem'}">
+                  <template v-for="(item,index) in datashow.B">
+                    <template v-if="item.color==1">
+                      <div class="item"
+                           style="background:rgba(172,35,23,1);box-shadow:0px .05rem 7px 0px rgba(172,35,23,0.22);"
+                           @click="jump1(item)">
+                        <div>{{item.name}}</div>
+                        <img src="../assets/region.png" alt style="width: .5rem;margin-top: .12rem"/>
+                      </div>
+                    </template>
+                    <template v-else-if="item.color==2">
+                      <div class="item"
+                           style="background:rgba(66,186,36,1);box-shadow:0px .06rem .12rem 0px rgba(66,186,36,0.25);"
+                           @click="jump1(item)">
+                        <div>{{item.name}}</div>
+                        <img src="../assets/region.png" alt style="width: .5rem;margin-top: .12rem"/>
+                      </div>
+                    </template>
+                    <template v-else-if="item.color==3">
+                      <div class="item"
+                           style="background:rgba(242,148,38,1);box-shadow:0px .06rem .08rem 0px rgba(242,148,38,0.21);"
+                           @click="jump1(item)">
+                        <div>{{item.name}}</div>
+                        <img src="../assets/region.png" alt style="width: .5rem;margin-top: .12rem"/>
+                      </div>
+                    </template>
+                    <template v-else>
+                      <div class="item"
+                           style="background:rgba(121,121,121,.5);box-shadow:0px 3px .31rem 0px rgba(121,121,121,0.1);"
+                           @click="jump1(item)">
+                        <div>{{item.name}}</div>
+                        <img src="../assets/region.png" alt style="width: .5rem;margin-top: .12rem"/>
+                      </div>
+                    </template>
 
 
-                </template>
+                  </template>
+                </div>
+                <div class="list_right_bottom" v-if="datashow.B&&datashow.B.length>8" @click="datashowB=!datashowB">
+                  <img :src="datashowB?require('../assets/top.png'):require('../assets/bottom.png')"
+                       alt="">{{datashowB ? '点击收起' : '点击展开'}}
+                </div>
               </div>
             </div>
             <div class="list">
@@ -153,40 +158,46 @@
 <!--                <div class="look" @click="jump('D')">查看</div>-->
               </div>
               <div class="list_right">
-                <template v-for="(item,index) in B">
-                  <template v-if="item.color==1">
-                    <div class="item"
-                         style="background:rgba(172,35,23,1);box-shadow:0px .05rem 7px 0px rgba(172,35,23,0.22);"
-                         @click="jump1(item)">
-                      <div>{{item.name}}</div>
-                      <img src="../assets/region.png" alt style="width: .5rem;margin-top: .12rem"/>
-                    </div>
+                <div class="list_right_top" :style="{height:datashowD?'auto':'1.2rem'}">
+                  <template v-for="(item,index) in datashow.D">
+                    <template v-if="item.color==1">
+                      <div class="item"
+                           style="background:rgba(172,35,23,1);box-shadow:0px .05rem 7px 0px rgba(172,35,23,0.22);"
+                           @click="jump1(item)">
+                        <div>{{item.name}}</div>
+                        <img src="../assets/region.png" alt style="width: .5rem;margin-top: .12rem"/>
+                      </div>
+                    </template>
+                    <template v-else-if="item.color==2">
+                      <div class="item"
+                           style="background:rgba(66,186,36,1);box-shadow:0px .06rem .12rem 0px rgba(66,186,36,0.25);"
+                           @click="jump1(item)">
+                        <div>{{item.name}}</div>
+                        <img src="../assets/region.png" alt style="width: .5rem;margin-top: .12rem"/>
+                      </div>
+                    </template>
+                    <template v-else-if="item.color==3">
+                      <div class="item"
+                           style="background:rgba(242,148,38,1);box-shadow:0px .06rem .08rem 0px rgba(242,148,38,0.21);"
+                           @click="jump1(item)">
+                        <div>{{item.name}}</div>
+                        <img src="../assets/region.png" alt style="width: .5rem;margin-top: .12rem"/>
+                      </div>
+                    </template>
+                    <template v-else>
+                      <div class="item"
+                           style="background:rgba(121,121,121,.5);box-shadow:0px 3px .31rem 0px rgba(121,121,121,0.1);"
+                           @click="jump1(item)">
+                        <div>{{item.name}}</div>
+                        <img src="../assets/region.png" alt style="width: .5rem;margin-top: .12rem"/>
+                      </div>
+                    </template>
                   </template>
-                  <template v-else-if="item.color==2">
-                    <div class="item"
-                         style="background:rgba(66,186,36,1);box-shadow:0px .06rem .12rem 0px rgba(66,186,36,0.25);"
-                         @click="jump1(item)">
-                      <div>{{item.name}}</div>
-                      <img src="../assets/region.png" alt style="width: .5rem;margin-top: .12rem"/>
-                    </div>
-                  </template>
-                  <template v-else-if="item.color==3">
-                    <div class="item"
-                         style="background:rgba(242,148,38,1);box-shadow:0px .06rem .08rem 0px rgba(242,148,38,0.21);"
-                         @click="jump1(item)">
-                      <div>{{item.name}}</div>
-                      <img src="../assets/region.png" alt style="width: .5rem;margin-top: .12rem"/>
-                    </div>
-                  </template>
-                  <template v-else>
-                    <div class="item"
-                         style="background:rgba(121,121,121,.5);box-shadow:0px 3px .31rem 0px rgba(121,121,121,0.1);"
-                         @click="jump1(item)">
-                      <div>{{item.name}}</div>
-                      <img src="../assets/region.png" alt style="width: .5rem;margin-top: .12rem"/>
-                    </div>
-                  </template>
-                </template>
+                </div>
+                <div class="list_right_bottom" v-if="datashow.D&&datashow.D.length>8" @click="datashowD=!datashowD">
+                  <img :src="datashowD?require('../assets/top.png'):require('../assets/bottom.png')"
+                       alt="">{{datashowD ? '点击收起' : '点击展开'}}
+                </div>
               </div>
             </div>
             <div class="list">
@@ -196,40 +207,46 @@
 <!--                <div class="look" @click="jump('E')">查看</div>-->
               </div>
               <div class="list_right">
-                <template v-for="(item,index) in C">
-                  <template v-if="item.color==1">
-                    <div class="item"
-                         style="background:rgba(172,35,23,1);box-shadow:0px .05rem 7px 0px rgba(172,35,23,0.22);"
-                         @click="jump1(item)">
-                      <div>{{item.name}}</div>
-                      <img src="../assets/region.png" alt style="width: .5rem;margin-top: .12rem"/>
-                    </div>
+                <div class="list_right_top" :style="{height:datashowE?'auto':'1.2rem'}">
+                  <template v-for="(item,index) in datashow.E">
+                    <template v-if="item.color==1">
+                      <div class="item"
+                           style="background:rgba(172,35,23,1);box-shadow:0px .05rem 7px 0px rgba(172,35,23,0.22);"
+                           @click="jump1(item)">
+                        <div>{{item.name}}</div>
+                        <img src="../assets/region.png" alt style="width: .5rem;margin-top: .12rem"/>
+                      </div>
+                    </template>
+                    <template v-else-if="item.color==2">
+                      <div class="item"
+                           style="background:rgba(66,186,36,1);box-shadow:0px .06rem .12rem 0px rgba(66,186,36,0.25);"
+                           @click="jump1(item)">
+                        <div>{{item.name}}</div>
+                        <img src="../assets/region.png" alt style="width: .5rem;margin-top: .12rem"/>
+                      </div>
+                    </template>
+                    <template v-else-if="item.color==3">
+                      <div class="item"
+                           style="background:rgba(242,148,38,1);box-shadow:0px .06rem .08rem 0px rgba(242,148,38,0.21);"
+                           @click="jump1(item)">
+                        <div>{{item.name}}</div>
+                        <img src="../assets/region.png" alt style="width: .5rem;margin-top: .12rem"/>
+                      </div>
+                    </template>
+                    <template v-else>
+                      <div class="item"
+                           style="background:rgba(121,121,121,.5);box-shadow:0px 3px .31rem 0px rgba(121,121,121,0.1);"
+                           @click="jump1(item)">
+                        <div>{{item.name}}</div>
+                        <img src="../assets/region.png" alt style="width: .5rem;margin-top: .12rem"/>
+                      </div>
+                    </template>
                   </template>
-                  <template v-else-if="item.color==2">
-                    <div class="item"
-                         style="background:rgba(66,186,36,1);box-shadow:0px .06rem .12rem 0px rgba(66,186,36,0.25);"
-                         @click="jump1(item)">
-                      <div>{{item.name}}</div>
-                      <img src="../assets/region.png" alt style="width: .5rem;margin-top: .12rem"/>
-                    </div>
-                  </template>
-                  <template v-else-if="item.color==3">
-                    <div class="item"
-                         style="background:rgba(242,148,38,1);box-shadow:0px .06rem .08rem 0px rgba(242,148,38,0.21);"
-                         @click="jump1(item)">
-                      <div>{{item.name}}</div>
-                      <img src="../assets/region.png" alt style="width: .5rem;margin-top: .12rem"/>
-                    </div>
-                  </template>
-                  <template v-else>
-                    <div class="item"
-                         style="background:rgba(121,121,121,.5);box-shadow:0px 3px .31rem 0px rgba(121,121,121,0.1);"
-                         @click="jump1(item)">
-                      <div>{{item.name}}</div>
-                      <img src="../assets/region.png" alt style="width: .5rem;margin-top: .12rem"/>
-                    </div>
-                  </template>
-                </template>
+                </div>
+                <div class="list_right_bottom" v-if="datashow.E&&datashow.E.length>8" @click="datashowE=!datashowE">
+                  <img :src="datashowE?require('../assets/top.png'):require('../assets/bottom.png')"
+                       alt="">{{datashowE ? '点击收起' : '点击展开'}}
+                </div>
               </div>
             </div>
 
@@ -259,11 +276,10 @@
       return {
         usermsg: null,
         msg: null,
-        A: [],
-        B: [],
-        C: [],
-        D: [],
-        E: [],
+        datashow: null,
+        datashowB:false,
+        datashowD:false,
+        datashowE:false,
         qycat:null,
       };
     },
@@ -278,9 +294,10 @@
       this.$api.getcplq().then(data => {
         if (data.code == 200) {
           that.qycat = data.qycat?data.qycat:'';
-          that.A = data.datashow.B;
-          that.B = data.datashow.D;
-          that.C = data.datashow.E;
+          that.datashow = data.datashow;
+          // that.A = data.datashow.B;
+          // that.B = data.datashow.D;
+          // that.C = data.datashow.E;
         }
       });
       that.$api.getcpofjz('路桥公司')
@@ -749,40 +766,55 @@
 
           .list_right {
             width: 7.28rem;
-            display: flex;
-            justify-content: flex-start;
-            align-items: flex-start;
-            /*align-content: flex-start;*/
-            padding-top: 7px;
-            flex-wrap: wrap;
-            margin: 0 0 0 .55rem;
 
-            .item {
-              width: 1.37rem;
-              height: .52rem;
-              /*background: rgba(66, 186, 36, 1);*/
-              /*box-shadow: 0px .06rem .12rem 0px rgba(66, 186, 36, 0.25);*/
-              border-radius: .06rem;
-              margin: 0 .15rem 0 0;
+            padding-top: 7px;
+            margin: 0 0 0 .55rem;
+            .list_right_top {
+              flex-wrap: wrap;
               display: flex;
               justify-content: flex-start;
               align-items: flex-start;
-              position: relative;
-              cursor: pointer;
+              align-content: flex-start;
+              overflow: hidden;
+              .item {
+                width: 1.37rem;
+                height: .52rem;
+                border-radius: .06rem;
+                margin: 0 .15rem .15rem 0;
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+                position: relative;
+                cursor: pointer;
 
-              div {
-                line-height: .52rem;
-                font-size: .16rem;
-                font-weight: 500;
-                color: rgba(255, 255, 255, 1);
-                margin: 0 0 0 .1rem;
+                div {
+                  line-height: .52rem;
+                  font-size: .16rem;
+                  font-weight: 500;
+                  color: rgba(255, 255, 255, 1);
+                  margin: 0 0 0 .1rem;
+                }
+
+                img {
+                  position: absolute;
+                  top: 0;
+                  opacity: 0.18;
+                  right: .12rem;
+                }
               }
+            }
+            .list_right_bottom {
+              width: 6.5rem;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              font-size: .18rem;
+              cursor: pointer;
+              margin-top: .2rem;
 
               img {
-                position: absolute;
-                top: 0;
-                opacity: 0.18;
-                right: .12rem;
+                width: .2rem;
+                margin-right: .2rem;
               }
             }
           }
