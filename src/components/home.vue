@@ -104,11 +104,11 @@
             <div class="list">
               <div class="list_left">
                 <div class="num">01</div>
-                <div class="title">{{qycat?qycat.B:''}}</div>
+                <div class="title">{{qycat?qycat.A:''}}</div>
               </div>
               <div class="list_right">
                 <div class="list_right_top" :style="{height:datashowB?'auto':'1.2rem'}">
-                  <template v-for="(item,index) in datashow.B">
+                  <template v-for="(item,index) in datashow.A">
                     <template v-if="item.color==1">
                       <div class="item"
                            style="background:rgba(172,35,23,1);box-shadow:0px .05rem 7px 0px rgba(172,35,23,0.22);"
@@ -154,12 +154,12 @@
             <div class="list">
               <div class="list_left">
                 <div class="num">02</div>
-                <div class="title">{{qycat?qycat.D:''}}</div>
+                <div class="title">{{qycat?qycat.B:''}}</div>
 <!--                <div class="look" @click="jump('D')">查看</div>-->
               </div>
               <div class="list_right">
                 <div class="list_right_top" :style="{height:datashowD?'auto':'1.2rem'}">
-                  <template v-for="(item,index) in datashow.D">
+                  <template v-for="(item,index) in datashow.B">
                     <template v-if="item.color==1">
                       <div class="item"
                            style="background:rgba(172,35,23,1);box-shadow:0px .05rem 7px 0px rgba(172,35,23,0.22);"
@@ -203,12 +203,12 @@
             <div class="list">
               <div class="list_left">
                 <div class="num">03</div>
-                <div class="title">{{qycat?qycat.E:''}}</div>
+                <div class="title">{{qycat?qycat.C:''}}</div>
 <!--                <div class="look" @click="jump('E')">查看</div>-->
               </div>
               <div class="list_right">
                 <div class="list_right_top" :style="{height:datashowE?'auto':'1.2rem'}">
-                  <template v-for="(item,index) in datashow.E">
+                  <template v-for="(item,index) in datashow.C">
                     <template v-if="item.color==1">
                       <div class="item"
                            style="background:rgba(172,35,23,1);box-shadow:0px .05rem 7px 0px rgba(172,35,23,0.22);"
